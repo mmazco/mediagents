@@ -2,7 +2,7 @@
 
 **"Who funds corporate media?" with your favorite hosts.**
 
-Two agents — Andrew (investigative reporter) and FJ (media industry insider) — investigate the ownership structures behind major news publications using real-time data, then debate what it means for journalism and democracy.
+Two agents, Andrew (investigative reporter) and FJ (industry veteran) investigate the ownership structures behind major news publications using real-time data, then debate what it means for journalism and democracy.
 
 Built for the [Cartesia x Anthropic Voice Agents Hackathon](https://cerebralvalley.ai/e/cartesia-voice-agents-hackathon) (SF, Feb 2026).
 
