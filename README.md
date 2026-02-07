@@ -90,6 +90,15 @@ Ownership data stored in a Notion database, queried at runtime via the Notion AP
 >
 > **Rules:** Keep responses to 2-4 sentences per turn. Tight, punchy delivery. When they present facts, you add the color commentary. Speak naturally (converted to speech). When citing bias/factuality, credit Ground News.
 
+## Pipeline Process (per publication)
+
+1. **Data** -- Add publication to `data/publications.json` with owner, ownership structure, conflicts of interest, controversies, Ground News ratings, and voice agent angles
+2. **Notion** -- Migrate to the Notion database via API (row with properties + page body with detailed blocks). This gives agents a structured data source to query at runtime
+3. **Generate conversation** -- Orchestrator loads the publication data from JSON + Notion, feeds it to Claude with `web_search` enabled. Claude's two personalities (Andrew and FJ) alternate 4 turns, pulling live data to supplement the curated dataset
+4. **Generate audio** -- Each turn gets piped through Cartesia TTS with the agent's voice ID. WAV files saved to `demo/audio/{pub_id}/`
+5. **Save demo** -- Conversation text + audio paths saved to `demo/{pub_id}_conversation.json`. The web UI loads this instantly without needing to regenerate
+6. **UI auto-updates** -- Server reads `data/publications.json` for the publication list and checks `demo/` for pre-baked conversations. New publications appear immediately
+
 ## Setup
 
 ```bash
