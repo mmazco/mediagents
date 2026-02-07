@@ -67,6 +67,149 @@ header h1 {
     font-weight: 400;
 }
 
+/* About Button */
+.btn-about {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.35rem 1rem;
+    border: 1.5px solid var(--text);
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+    z-index: 50;
+    transition: all 0.2s;
+}
+
+.btn-about:hover {
+    background: var(--text);
+    color: var(--bg);
+}
+
+.demo-github {
+    text-align: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.demo-github a {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.1rem;
+}
+
+.demo-github a:hover {
+    border-bottom-color: var(--text);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeIn 0.2s ease;
+}
+
+.modal-content {
+    background: var(--bg);
+    border: 1.5px solid var(--text);
+    max-width: 640px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 2.5rem;
+    position: relative;
+    clip-path: polygon(0% 0.3%, 99.7% 0%, 100% 99.7%, 0.3% 100%);
+}
+
+.modal-content h2 {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1.5px solid var(--text);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-dim);
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: var(--text);
+}
+
+.demo-section {
+    margin-bottom: 1.75rem;
+}
+
+.demo-section:last-child {
+    margin-bottom: 0;
+}
+
+.demo-time {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--blue);
+    margin-bottom: 0.25rem;
+}
+
+.demo-section h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.demo-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.demo-section ol,
+.demo-section ul {
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.demo-section li {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+}
+
+.demo-section em {
+    font-style: italic;
+}
+
 /* Characters Section */
 .characters {
     display: flex;

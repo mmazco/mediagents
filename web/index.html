@@ -23,6 +23,44 @@
             <p class="subtitle">"Who funds corporate media?" with your favorite hosts.</p>
         </header>
 
+        <button class="btn-about" onclick="openDemo()">About</button>
+
+        <!-- Demo Modal -->
+        <div id="demo-modal" class="modal hidden" onclick="if(event.target===this)closeDemo()">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeDemo()">&times;</button>
+                <h2>About</h2>
+
+                <div class="demo-section">
+                    <h3>The Story</h3>
+                    <p>Five billionaires and two family dynasties control the majority of American news. Most people consume media every day without knowing who owns it, what else those owners invest in, or how that shapes what gets reported.</p>
+                    <p><em>Follow the Money</em> is a series featuring two (agent) hosts who investigate who owns corporate media, discussing their findings on the money trail, ownership data, and biases of these publications, using real-time data to highlight current events and historical data for a full investigation.</p>
+                </div>
+
+                <div class="demo-section">
+                    <h3>How It Works</h3>
+                    <p><strong>Claude</strong> powers both personalities and searches the web for real-time ownership data. <strong>Cartesia</strong> gives each character a distinct voice. <strong>Notion</strong> stores the curated ownership database, queried alongside live web search.</p>
+                    <p>6 publications. 3 data sources per conversation. Every investigation is different.</p>
+                </div>
+
+                <div class="demo-section">
+                    <h3>Try It Yourself</h3>
+                    <ol>
+                        <li>Close this modal</li>
+                        <li>Pick a publication — try <strong>The Washington Post</strong> or <strong>Fox News</strong></li>
+                        <li>Watch as Andrew and FJ investigate the ownership in real-time</li>
+                        <li>Hit <strong>Start Investigation</strong> to hear them debate</li>
+                        <li>Click any turn to expand and read the full transcript</li>
+                        <li>Click the globe to go back and investigate another</li>
+                    </ol>
+                </div>
+
+                <div class="demo-section demo-github">
+                    <p>This project is open source, <a href="https://github.com/mmazco/mediagents" target="_blank">view on GitHub</a></p>
+                </div>
+            </div>
+        </div>
+
         <div class="characters">
             <div class="character reporter">
                 <img src="/static/assets/reporter.png" alt="Street Reporter">
@@ -99,7 +137,7 @@
                 Bias & factuality ratings via <a href="https://ground.news/" target="_blank">Ground News</a>
             </p>
             <p class="credit">
-                Made by <a href="https://x.com/mmazco" target="_blank">@mmazco</a>
+                Made by <a href="https://x.com/mmazco" target="_blank">@mmazco</a> · <a href="https://github.com/mmazco/mediagents" target="_blank">View on GitHub</a>
             </p>
             <div class="footer-image">
                 <a href="https://www.blind-magazine.com/en/news/lars-tunbjork-a-view-from-the-side/" target="_blank">

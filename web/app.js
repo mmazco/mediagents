@@ -287,4 +287,12 @@ function backToSelector() {
     document.querySelector('.characters').classList.remove('hidden');
 }
 
+function openDemo() {
+    document.getElementById('demo-modal').classList.remove('hidden');
+}
+
+function closeDemo() {
+    document.getElementById('demo-modal').classList.add('hidden');
+}
+
 function esc(s) { return s.replace(/'/g, "\\'").replace(/"/g, '&quot;'); }

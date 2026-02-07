@@ -40,7 +40,7 @@ todos:
     status: completed
   - id: prepare-demo
     content: Create demo scenarios and 3-minute presentation script
-    status: pending
+    status: completed
   - id: finalize-documentation
     content: Complete README, setup instructions, and open source preparation
     status: completed
