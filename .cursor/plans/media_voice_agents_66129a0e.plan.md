@@ -51,27 +51,29 @@ isProject: false
 
 ## Architecture Overview
 
-The system consists of four main components working together:
-
 ```mermaid
 graph TD
-    User[User Input] --> Orchestrator[Conversation Orchestrator]
-    Orchestrator --> Claude[Claude API]
-    Claude --> WebSearch[Web Search Tool]
-    Claude --> AgentLogic[Agent Personalities]
-    AgentLogic --> StreetReporter[Street Reporter Agent]
-    AgentLogic --> InsiderAgent[Insider Agent]
-    Claude --> Cartesia[Cartesia TTS API]
-    Cartesia --> AudioPlayer[Audio Playback]
-    Orchestrator --> WebInterface[Web Interface]
+    User[User Browser] --> FastAPI[FastAPI Server]
+    FastAPI --> WebUI[Web Interface]
+    FastAPI --> Orchestrator[Orchestrator]
     
     subgraph data [Data Sources]
-        PublicationsDB[Publications JSON]
-        NotionDB[Notion Database - Optional]
+        PubJSON[publications.json]
+        NotionDB[Notion Database]
     end
     
-    Claude --> PublicationsDB
-    Claude --> NotionDB
+    Orchestrator --> PubJSON
+    Orchestrator --> NotionDB
+    
+    Orchestrator --> Claude[Claude API]
+    Claude --> WebSearch[Web Search Tool]
+    Claude --> Reporter[Andrew - Reporter Prompt]
+    Claude --> Insider[FJ - Insider Prompt]
+    
+    Orchestrator --> Cartesia[Cartesia TTS]
+    Cartesia --> AudioFiles[WAV Audio Files]
+    
+    AudioFiles --> WebUI
 ```
 
 
