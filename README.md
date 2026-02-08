@@ -26,12 +26,12 @@ Pick a publication. Two AI characters investigate who really owns it — pulling
 |-------|-----------|------|
 | Reasoning | **Claude API** (claude-sonnet-4-20250514) | Agent personalities, web search, conversation generation |
 | Voice | **Cartesia TTS API** (sonic-2) | Text-to-speech with distinct voices per character |
-| Data | **Notion** database + JSON | Structured ownership data, queried at runtime |
+| Data | **Notion** database + JSON | Structured ownership data, queried at runtime (sample [Notion DB](https://mmazco.notion.site/300993cee5d0802ea27dc8d2b9d226df?v=300993cee5d08010b453000c055f6a86) integrated) |
 | Web Search | Claude `web_search_20250305` | Real-time ownership developments, current events |
 | Backend | **FastAPI** + Python | Orchestration, API endpoints |
 | Frontend | HTML + CSS + JS | Editorial-style UI with audio playback |
 
-## How It Works
+## How It Works (made simple for a hackathon demo)
 
 ```mermaid
 graph TD
